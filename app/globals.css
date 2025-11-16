@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-warm: #f06f3c;
+  --color-deep: #1e1b4b;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  background: radial-gradient(circle at top, rgba(255, 240, 229, 0.6), transparent),
+    #f8fafc;
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, rgba(128, 115, 255, 0.9), rgba(240, 111, 60, 0.9));
+}
+
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: white;
+  border-radius: inherit;
+}
